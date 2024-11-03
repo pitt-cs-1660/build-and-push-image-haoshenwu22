@@ -1,0 +1,896 @@
+[
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "authenticationInfo": {
+        "principalEmail": "haoshenw123@gmail.com",
+        "principalSubject": "user:haoshenw123@gmail.com"
+      },
+      "requestMetadata": {
+        "callerIp": "2601:547:1980:5d60:28d0:46e0:da7a:7c4",
+        "callerSuppliedUserAgent": "google-cloud-sdk gcloud/497.0.0 command/gcloud.artifacts.repositories.create invocation-id/ff0c4f1a64e9406aae468cfe3ff7ec21 environment/None environment-version/None client-os/MACOSX client-os-ver/23.6.0 client-pltf-arch/arm interactive/True from-script/False python/3.12.3 term/xterm-256color (Macintosh; Intel Mac OS X 23.6.0),gzip(gfe),gzip(gfe)",
+        "requestAttributes": {
+          "time": "2024-11-03T20:00:42.478012543Z",
+          "auth": {}
+        },
+        "destinationAttributes": {}
+      },
+      "serviceName": "artifactregistry.googleapis.com",
+      "methodName": "google.devtools.artifactregistry.v1.ArtifactRegistry.CreateRepository",
+      "authorizationInfo": [
+        {
+          "resource": "projects/endless-bounty-433922-g4/locations/us-central1",
+          "permission": "artifactregistry.repositories.create",
+          "granted": true,
+          "resourceAttributes": {},
+          "permissionType": "ADMIN_WRITE"
+        }
+      ],
+      "resourceName": "projects/endless-bounty-433922-g4/locations/us-central1",
+      "request": {
+        "parent": "projects/endless-bounty-433922-g4/locations/us-central1",
+        "repositoryId": "assignment3repo",
+        "@type": "type.googleapis.com/google.devtools.artifactregistry.v1.CreateRepositoryRequest",
+        "repository": {
+          "name": "projects/endless-bounty-433922-g4/locations/us-central1/repositories/assignment3repo",
+          "format": "DOCKER"
+        }
+      },
+      "resourceLocation": {
+        "currentLocations": [
+          "us-central1"
+        ]
+      }
+    },
+    "insertId": "1qgekuxd3jrt",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "service": "artifactregistry.googleapis.com",
+        "project_id": "endless-bounty-433922-g4",
+        "method": "google.devtools.artifactregistry.v1.ArtifactRegistry.CreateRepository"
+      }
+    },
+    "timestamp": "2024-11-03T20:00:42.467600864Z",
+    "severity": "NOTICE",
+    "logName": "projects/endless-bounty-433922-g4/logs/cloudaudit.googleapis.com%2Factivity",
+    "operation": {
+      "id": "projects/endless-bounty-433922-g4/locations/us-central1/operations/9a255ca5-bd99-4f51-be04-8c44afb556e4",
+      "producer": "artifactregistry.googleapis.com",
+      "first": true
+    },
+    "receiveTimestamp": "2024-11-03T20:00:42.847700624Z"
+  },
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "status": {},
+      "authenticationInfo": {
+        "principalEmail": "service-agent-manager@system.gserviceaccount.com"
+      },
+      "requestMetadata": {
+        "callerIp": "private",
+        "requestAttributes": {},
+        "destinationAttributes": {}
+      },
+      "serviceName": "cloudresourcemanager.googleapis.com",
+      "methodName": "SetIamPolicy",
+      "authorizationInfo": [
+        {
+          "resource": "projects/endless-bounty-433922-g4",
+          "permission": "resourcemanager.projects.setIamPolicy",
+          "granted": true,
+          "resourceAttributes": {
+            "service": "cloudresourcemanager.googleapis.com",
+            "name": "projects/endless-bounty-433922-g4",
+            "type": "cloudresourcemanager.googleapis.com/Project"
+          },
+          "permissionType": "ADMIN_WRITE"
+        },
+        {
+          "resource": "projects/endless-bounty-433922-g4",
+          "permission": "resourcemanager.projects.setIamPolicy",
+          "granted": true,
+          "resourceAttributes": {
+            "service": "cloudresourcemanager.googleapis.com",
+            "name": "projects/endless-bounty-433922-g4",
+            "type": "cloudresourcemanager.googleapis.com/Project"
+          },
+          "permissionType": "ADMIN_WRITE"
+        }
+      ],
+      "resourceName": "projects/endless-bounty-433922-g4",
+      "serviceData": {
+        "@type": "type.googleapis.com/google.iam.v1.logging.AuditData",
+        "policyDelta": {
+          "bindingDeltas": [
+            {
+              "action": "ADD",
+              "role": "roles/artifactregistry.serviceAgent",
+              "member": "serviceAccount:service-838473573150@gcp-sa-artifactregistry.iam.gserviceaccount.com"
+            }
+          ]
+        }
+      },
+      "request": {
+        "policy": {
+          "bindings": [
+            {
+              "role": "roles/appengine.serviceAgent",
+              "members": [
+                "serviceAccount:service-838473573150@gcp-gae-service.iam.gserviceaccount.com"
+              ]
+            },
+            {
+              "members": [
+                "serviceAccount:838473573150@cloudbuild.gserviceaccount.com"
+              ],
+              "role": "roles/cloudbuild.builds.builder"
+            },
+            {
+              "members": [
+                "serviceAccount:service-838473573150@gcp-sa-cloudbuild.iam.gserviceaccount.com"
+              ],
+              "role": "roles/cloudbuild.serviceAgent"
+            },
+            {
+              "members": [
+                "serviceAccount:service-838473573150@gcf-admin-robot.iam.gserviceaccount.com"
+              ],
+              "role": "roles/cloudfunctions.serviceAgent"
+            },
+            {
+              "members": [
+                "serviceAccount:service-838473573150@compute-system.iam.gserviceaccount.com"
+              ],
+              "role": "roles/compute.serviceAgent"
+            },
+            {
+              "members": [
+                "serviceAccount:service-838473573150@containerregistry.iam.gserviceaccount.com"
+              ],
+              "role": "roles/containerregistry.ServiceAgent"
+            },
+            {
+              "members": [
+                "serviceAccount:838473573150-compute@developer.gserviceaccount.com",
+                "serviceAccount:838473573150@cloudservices.gserviceaccount.com",
+                "serviceAccount:endless-bounty-433922-g4@appspot.gserviceaccount.com"
+              ],
+              "role": "roles/editor"
+            },
+            {
+              "members": [
+                "serviceAccount:service-838473573150@firebase-rules.iam.gserviceaccount.com"
+              ],
+              "role": "roles/firebaserules.system"
+            },
+            {
+              "role": "roles/firestore.serviceAgent",
+              "members": [
+                "serviceAccount:service-838473573150@gcp-sa-firestore.iam.gserviceaccount.com"
+              ]
+            },
+            {
+              "members": [
+                "user:haoshenw123@gmail.com"
+              ],
+              "role": "roles/owner"
+            },
+            {
+              "members": [
+                "serviceAccount:service-838473573150@gcp-sa-pubsub.iam.gserviceaccount.com"
+              ],
+              "role": "roles/pubsub.serviceAgent"
+            },
+            {
+              "members": [
+                "serviceAccountId:114340843597384295073"
+              ],
+              "role": "roles/artifactregistry.serviceAgent"
+            }
+          ],
+          "etag": "BwYkAhG8yFo="
+        },
+        "@type": "type.googleapis.com/google.iam.v1.SetIamPolicyRequest",
+        "resource": "838473573150"
+      },
+      "response": {
+        "bindings": [
+          {
+            "members": [
+              "serviceAccount:service-838473573150@gcp-gae-service.iam.gserviceaccount.com"
+            ],
+            "role": "roles/appengine.serviceAgent"
+          },
+          {
+            "members": [
+              "serviceAccount:service-838473573150@gcp-sa-artifactregistry.iam.gserviceaccount.com"
+            ],
+            "role": "roles/artifactregistry.serviceAgent"
+          },
+          {
+            "members": [
+              "serviceAccount:838473573150@cloudbuild.gserviceaccount.com"
+            ],
+            "role": "roles/cloudbuild.builds.builder"
+          },
+          {
+            "members": [
+              "serviceAccount:service-838473573150@gcp-sa-cloudbuild.iam.gserviceaccount.com"
+            ],
+            "role": "roles/cloudbuild.serviceAgent"
+          },
+          {
+            "members": [
+              "serviceAccount:service-838473573150@gcf-admin-robot.iam.gserviceaccount.com"
+            ],
+            "role": "roles/cloudfunctions.serviceAgent"
+          },
+          {
+            "role": "roles/compute.serviceAgent",
+            "members": [
+              "serviceAccount:service-838473573150@compute-system.iam.gserviceaccount.com"
+            ]
+          },
+          {
+            "members": [
+              "serviceAccount:service-838473573150@containerregistry.iam.gserviceaccount.com"
+            ],
+            "role": "roles/containerregistry.ServiceAgent"
+          },
+          {
+            "role": "roles/editor",
+            "members": [
+              "serviceAccount:838473573150-compute@developer.gserviceaccount.com",
+              "serviceAccount:838473573150@cloudservices.gserviceaccount.com",
+              "serviceAccount:endless-bounty-433922-g4@appspot.gserviceaccount.com"
+            ]
+          },
+          {
+            "members": [
+              "serviceAccount:service-838473573150@firebase-rules.iam.gserviceaccount.com"
+            ],
+            "role": "roles/firebaserules.system"
+          },
+          {
+            "members": [
+              "serviceAccount:service-838473573150@gcp-sa-firestore.iam.gserviceaccount.com"
+            ],
+            "role": "roles/firestore.serviceAgent"
+          },
+          {
+            "members": [
+              "user:haoshenw123@gmail.com"
+            ],
+            "role": "roles/owner"
+          },
+          {
+            "members": [
+              "serviceAccount:service-838473573150@gcp-sa-pubsub.iam.gserviceaccount.com"
+            ],
+            "role": "roles/pubsub.serviceAgent"
+          }
+        ],
+        "etag": "BwYmB5+OotM=",
+        "@type": "type.googleapis.com/google.iam.v1.Policy"
+      }
+    },
+    "insertId": "-n0vjvte2feke",
+    "resource": {
+      "type": "project",
+      "labels": {
+        "project_id": "endless-bounty-433922-g4"
+      }
+    },
+    "timestamp": "2024-11-03T20:00:43.337806Z",
+    "severity": "NOTICE",
+    "logName": "projects/endless-bounty-433922-g4/logs/cloudaudit.googleapis.com%2Factivity",
+    "receiveTimestamp": "2024-11-03T20:00:43.853565406Z"
+  },
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "status": {},
+      "authenticationInfo": {
+        "principalEmail": "haoshenw123@gmail.com",
+        "principalSubject": "user:haoshenw123@gmail.com"
+      },
+      "requestMetadata": {
+        "requestAttributes": {},
+        "destinationAttributes": {}
+      },
+      "serviceName": "artifactregistry.googleapis.com",
+      "methodName": "google.devtools.artifactregistry.v1.ArtifactRegistry.CreateRepository",
+      "resourceName": "projects/endless-bounty-433922-g4/locations/us-central1/repositories/assignment3repo",
+      "response": {
+        "name": "projects/endless-bounty-433922-g4/locations/us-central1/repositories/assignment3repo",
+        "format": "DOCKER",
+        "description": "Docker repository for CI/CD",
+        "@type": "type.googleapis.com/google.protobuf.Any",
+        "mode": "STANDARD_REPOSITORY",
+        "vulnerabilityScanningConfig": {
+          "lastEnableTime": "2024-11-03T20:00:42.488563419Z"
+        },
+        "sbomConfig": {}
+      }
+    },
+    "insertId": "1f3dmnrdo8lm",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "method": "google.devtools.artifactregistry.v1.ArtifactRegistry.CreateRepository",
+        "project_id": "endless-bounty-433922-g4",
+        "service": "artifactregistry.googleapis.com"
+      }
+    },
+    "timestamp": "2024-11-03T20:00:51.316961645Z",
+    "severity": "NOTICE",
+    "logName": "projects/endless-bounty-433922-g4/logs/cloudaudit.googleapis.com%2Factivity",
+    "operation": {
+      "id": "projects/endless-bounty-433922-g4/locations/us-central1/operations/9a255ca5-bd99-4f51-be04-8c44afb556e4",
+      "producer": "artifactregistry.googleapis.com",
+      "last": true
+    },
+    "receiveTimestamp": "2024-11-03T20:00:51.442737230Z"
+  },
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "authenticationInfo": {
+        "principalEmail": "haoshenw123@gmail.com",
+        "principalSubject": "user:haoshenw123@gmail.com"
+      },
+      "requestMetadata": {
+        "callerIp": "2601:547:1980:5d60:28d0:46e0:da7a:7c4",
+        "callerSuppliedUserAgent": "google-cloud-sdk gcloud/497.0.0 command/gcloud.iam.workload-identity-pools.create invocation-id/006f983b086d4663adb7550e02a4f997 environment/None environment-version/None client-os/MACOSX client-os-ver/23.6.0 client-pltf-arch/arm interactive/True from-script/False python/3.12.3 term/xterm-256color (Macintosh; Intel Mac OS X 23.6.0),gzip(gfe)",
+        "requestAttributes": {
+          "time": "2024-11-03T20:15:17.681395233Z",
+          "auth": {}
+        },
+        "destinationAttributes": {}
+      },
+      "serviceName": "iam.googleapis.com",
+      "methodName": "google.iam.v1.WorkloadIdentityPools.CreateWorkloadIdentityPool",
+      "authorizationInfo": [
+        {
+          "resource": "projects/endless-bounty-433922-g4/locations/global",
+          "permission": "iam.workloadIdentityPools.create",
+          "granted": true,
+          "resourceAttributes": {},
+          "permissionType": "ADMIN_WRITE"
+        }
+      ],
+      "resourceName": "projects/endless-bounty-433922-g4/locations/global",
+      "request": {
+        "parent": "projects/endless-bounty-433922-g4/locations/global",
+        "workloadIdentityPool": {
+          "displayName": "GitHub Actions Pool",
+          "disabled": false
+        },
+        "@type": "type.googleapis.com/google.iam.v1.CreateWorkloadIdentityPoolRequest",
+        "workloadIdentityPoolId": "github"
+      },
+      "resourceLocation": {
+        "currentLocations": [
+          "global"
+        ]
+      }
+    },
+    "insertId": "zu0e39disxr",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "method": "google.iam.v1.WorkloadIdentityPools.CreateWorkloadIdentityPool",
+        "service": "iam.googleapis.com",
+        "project_id": "endless-bounty-433922-g4"
+      }
+    },
+    "timestamp": "2024-11-03T20:15:17.672037877Z",
+    "severity": "NOTICE",
+    "logName": "projects/endless-bounty-433922-g4/logs/cloudaudit.googleapis.com%2Factivity",
+    "operation": {
+      "id": "projects/838473573150/locations/global/workloadIdentityPools/github/operations/bifqrvvtt64qmeea3tzqo00000000000",
+      "producer": "iam.googleapis.com",
+      "first": true
+    },
+    "receiveTimestamp": "2024-11-03T20:15:18.698324610Z"
+  },
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "authenticationInfo": {
+        "principalEmail": "haoshenw123@gmail.com",
+        "principalSubject": "user:haoshenw123@gmail.com"
+      },
+      "requestMetadata": {
+        "requestAttributes": {},
+        "destinationAttributes": {}
+      },
+      "serviceName": "iam.googleapis.com",
+      "methodName": "google.iam.v1.WorkloadIdentityPools.CreateWorkloadIdentityPool",
+      "resourceName": "projects/endless-bounty-433922-g4/locations/global",
+      "response": {
+        "@type": "type.googleapis.com/google.longrunning.Operation",
+        "name": "projects/838473573150/locations/global/workloadIdentityPools/github/operations/bifqrvvtt64qmeea3tzqo00000000000"
+      }
+    },
+    "insertId": "x2s8xrc13n",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "method": "google.iam.v1.WorkloadIdentityPools.CreateWorkloadIdentityPool",
+        "project_id": "endless-bounty-433922-g4",
+        "service": "iam.googleapis.com"
+      }
+    },
+    "timestamp": "2024-11-03T20:15:18.334326Z",
+    "severity": "NOTICE",
+    "logName": "projects/endless-bounty-433922-g4/logs/cloudaudit.googleapis.com%2Factivity",
+    "operation": {
+      "id": "projects/838473573150/locations/global/workloadIdentityPools/github/operations/bifqrvvtt64qmeea3tzqo00000000000",
+      "producer": "iam.googleapis.com",
+      "last": true
+    },
+    "receiveTimestamp": "2024-11-03T20:15:18.684562151Z"
+  },
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "authenticationInfo": {
+        "principalEmail": "haoshenw123@gmail.com",
+        "principalSubject": "user:haoshenw123@gmail.com"
+      },
+      "requestMetadata": {
+        "callerIp": "2601:547:1980:5d60:28d0:46e0:da7a:7c4",
+        "callerSuppliedUserAgent": "google-cloud-sdk gcloud/497.0.0 command/gcloud.iam.workload-identity-pools.providers.create-oidc invocation-id/e6c8e3208bd2464f89f31ceb4810610a environment/None environment-version/None client-os/MACOSX client-os-ver/23.6.0 client-pltf-arch/arm interactive/True from-script/False python/3.12.3 term/xterm-256color (Macintosh; Intel Mac OS X 23.6.0),gzip(gfe)",
+        "requestAttributes": {
+          "time": "2024-11-03T20:51:37.719817135Z",
+          "auth": {}
+        },
+        "destinationAttributes": {}
+      },
+      "serviceName": "iam.googleapis.com",
+      "methodName": "google.iam.v1.WorkloadIdentityPools.CreateWorkloadIdentityPoolProvider",
+      "authorizationInfo": [
+        {
+          "resource": "projects/endless-bounty-433922-g4/locations/global/workloadIdentityPools/github",
+          "permission": "iam.workloadIdentityPoolProviders.create",
+          "granted": true,
+          "resourceAttributes": {},
+          "permissionType": "ADMIN_WRITE"
+        }
+      ],
+      "resourceName": "projects/endless-bounty-433922-g4/locations/global/workloadIdentityPools/github",
+      "request": {
+        "workloadIdentityPoolProviderId": "my-repo",
+        "parent": "projects/endless-bounty-433922-g4/locations/global/workloadIdentityPools/github",
+        "workloadIdentityPoolProvider": {
+          "displayName": "My GitHub repo Provider",
+          "oidc": {
+            "issuerUri": "https://token.actions.githubusercontent.com"
+          },
+          "attributeCondition": "assertion.repository_owner == 'pitt-cs-1660'",
+          "attributeMapping": {
+            "attribute.actor": "assertion.actor",
+            "attribute.repository": "assertion.repository",
+            "attribute.repository_owner": "assertion.repository_owner",
+            "google.subject": "assertion.sub"
+          },
+          "disabled": false
+        },
+        "@type": "type.googleapis.com/google.iam.v1.CreateWorkloadIdentityPoolProviderRequest"
+      },
+      "resourceLocation": {
+        "currentLocations": [
+          "global"
+        ]
+      }
+    },
+    "insertId": "o5ewspdjb60",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "method": "google.iam.v1.WorkloadIdentityPools.CreateWorkloadIdentityPoolProvider",
+        "service": "iam.googleapis.com",
+        "project_id": "endless-bounty-433922-g4"
+      }
+    },
+    "timestamp": "2024-11-03T20:51:37.701649434Z",
+    "severity": "NOTICE",
+    "logName": "projects/endless-bounty-433922-g4/logs/cloudaudit.googleapis.com%2Factivity",
+    "operation": {
+      "id": "projects/838473573150/locations/global/workloadIdentityPools/github/providers/my-repo/operations/bifqrwwet64qmehyq3jxq00000000000",
+      "producer": "iam.googleapis.com",
+      "first": true
+    },
+    "receiveTimestamp": "2024-11-03T20:51:38.436687056Z"
+  },
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "authenticationInfo": {
+        "principalEmail": "haoshenw123@gmail.com",
+        "principalSubject": "user:haoshenw123@gmail.com"
+      },
+      "requestMetadata": {
+        "requestAttributes": {},
+        "destinationAttributes": {}
+      },
+      "serviceName": "iam.googleapis.com",
+      "methodName": "google.iam.v1.WorkloadIdentityPools.CreateWorkloadIdentityPoolProvider",
+      "resourceName": "projects/endless-bounty-433922-g4/locations/global/workloadIdentityPools/github",
+      "response": {
+        "@type": "type.googleapis.com/google.longrunning.Operation",
+        "name": "projects/838473573150/locations/global/workloadIdentityPools/github/providers/my-repo/operations/bifqrwwet64qmehyq3jxq00000000000"
+      }
+    },
+    "insertId": "-frui8rc21j",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "service": "iam.googleapis.com",
+        "project_id": "endless-bounty-433922-g4",
+        "method": "google.iam.v1.WorkloadIdentityPools.CreateWorkloadIdentityPoolProvider"
+      }
+    },
+    "timestamp": "2024-11-03T20:51:38.255729Z",
+    "severity": "NOTICE",
+    "logName": "projects/endless-bounty-433922-g4/logs/cloudaudit.googleapis.com%2Factivity",
+    "operation": {
+      "id": "projects/838473573150/locations/global/workloadIdentityPools/github/providers/my-repo/operations/bifqrwwet64qmehyq3jxq00000000000",
+      "producer": "iam.googleapis.com",
+      "last": true
+    },
+    "receiveTimestamp": "2024-11-03T20:51:38.297155261Z"
+  },
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "authenticationInfo": {
+        "principalEmail": "haoshenw123@gmail.com",
+        "principalSubject": "user:haoshenw123@gmail.com"
+      },
+      "requestMetadata": {
+        "callerIp": "2601:547:1980:5d60:28d0:46e0:da7a:7c4",
+        "callerSuppliedUserAgent": "google-cloud-sdk gcloud/497.0.0 command/gcloud.secrets.add-iam-policy-binding invocation-id/458d37df06964082a10db20a77114be8 environment/None environment-version/None client-os/MACOSX client-os-ver/23.6.0 client-pltf-arch/arm interactive/True from-script/False python/3.12.3 term/xterm-256color (Macintosh; Intel Mac OS X 23.6.0),gzip(gfe)",
+        "requestAttributes": {},
+        "destinationAttributes": {}
+      },
+      "serviceName": "serviceusage.googleapis.com",
+      "methodName": "google.api.serviceusage.v1.ServiceUsage.EnableService",
+      "authorizationInfo": [
+        {
+          "resource": "projectnumbers/838473573150/services/secretmanager.googleapis.com",
+          "permission": "serviceusage.services.enable",
+          "granted": true,
+          "resourceAttributes": {},
+          "permissionType": "ADMIN_WRITE"
+        },
+        {
+          "resource": "services/secretmanager.googleapis.com",
+          "permission": "servicemanagement.services.bind",
+          "granted": true,
+          "resourceAttributes": {},
+          "permissionType": "DATA_WRITE"
+        }
+      ],
+      "resourceName": "projects/endless-bounty-433922-g4/services/secretmanager.googleapis.com",
+      "request": {
+        "@type": "type.googleapis.com/google.api.serviceusage.v1.EnableServiceRequest",
+        "name": "projects/endless-bounty-433922-g4/services/secretmanager.googleapis.com"
+      }
+    },
+    "insertId": "16qx9pcdebtz",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "project_id": "endless-bounty-433922-g4",
+        "service": "serviceusage.googleapis.com",
+        "method": "google.api.serviceusage.v1.ServiceUsage.EnableService"
+      }
+    },
+    "timestamp": "2024-11-03T21:09:13.919442Z",
+    "severity": "NOTICE",
+    "logName": "projects/endless-bounty-433922-g4/logs/cloudaudit.googleapis.com%2Factivity",
+    "operation": {
+      "id": "operations/acat.p2-838473573150-6b585b7e-09a3-42f5-86a9-550c4b49fa14",
+      "producer": "serviceusage.googleapis.com",
+      "first": true
+    },
+    "receiveTimestamp": "2024-11-03T21:09:15.458229355Z"
+  },
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "status": {},
+      "authenticationInfo": {
+        "principalEmail": "haoshenw123@gmail.com",
+        "principalSubject": "user:haoshenw123@gmail.com"
+      },
+      "requestMetadata": {
+        "callerIp": "2601:547:1980:5d60:28d0:46e0:da7a:7c4",
+        "callerSuppliedUserAgent": "google-cloud-sdk gcloud/497.0.0 command/gcloud.secrets.add-iam-policy-binding invocation-id/458d37df06964082a10db20a77114be8 environment/None environment-version/None client-os/MACOSX client-os-ver/23.6.0 client-pltf-arch/arm interactive/True from-script/False python/3.12.3 term/xterm-256color (Macintosh; Intel Mac OS X 23.6.0),gzip(gfe)",
+        "requestAttributes": {},
+        "destinationAttributes": {}
+      },
+      "serviceName": "serviceusage.googleapis.com",
+      "methodName": "google.longrunning.Operations.GetOperation",
+      "authorizationInfo": [
+        {
+          "resource": "projectnumbers/838473573150",
+          "permission": "serviceusage.services.enable",
+          "granted": true,
+          "resourceAttributes": {},
+          "permissionType": "ADMIN_WRITE"
+        },
+        {
+          "resource": "projectnumbers/838473573150/operations/-",
+          "permission": "serviceusage.operations.get",
+          "granted": true,
+          "resourceAttributes": {},
+          "permissionType": "DATA_READ"
+        },
+        {
+          "resource": "projectnumbers/838473573150",
+          "permission": "serviceusage.services.get",
+          "granted": true,
+          "resourceAttributes": {},
+          "permissionType": "DATA_READ"
+        }
+      ],
+      "resourceName": "projects/838473573150/operations/acat.p2-838473573150-6b585b7e-09a3-42f5-86a9-550c4b49fa14"
+    },
+    "insertId": "1l79h01ddhx8",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "service": "serviceusage.googleapis.com",
+        "project_id": "endless-bounty-433922-g4",
+        "method": "google.longrunning.Operations.GetOperation"
+      }
+    },
+    "timestamp": "2024-11-03T21:09:14.887120Z",
+    "severity": "NOTICE",
+    "logName": "projects/endless-bounty-433922-g4/logs/cloudaudit.googleapis.com%2Factivity",
+    "receiveTimestamp": "2024-11-03T21:09:15.638603222Z"
+  },
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "status": {},
+      "authenticationInfo": {
+        "principalEmail": "haoshenw123@gmail.com",
+        "principalSubject": "user:haoshenw123@gmail.com"
+      },
+      "requestMetadata": {
+        "callerIp": "2601:547:1980:5d60:28d0:46e0:da7a:7c4",
+        "callerSuppliedUserAgent": "google-cloud-sdk gcloud/497.0.0 command/gcloud.secrets.add-iam-policy-binding invocation-id/458d37df06964082a10db20a77114be8 environment/None environment-version/None client-os/MACOSX client-os-ver/23.6.0 client-pltf-arch/arm interactive/True from-script/False python/3.12.3 term/xterm-256color (Macintosh; Intel Mac OS X 23.6.0),gzip(gfe)",
+        "requestAttributes": {},
+        "destinationAttributes": {}
+      },
+      "serviceName": "serviceusage.googleapis.com",
+      "methodName": "google.api.serviceusage.v1.ServiceUsage.EnableService",
+      "authorizationInfo": [
+        {
+          "resource": "projectnumbers/838473573150/services/secretmanager.googleapis.com",
+          "permission": "serviceusage.services.enable",
+          "granted": true,
+          "resourceAttributes": {},
+          "permissionType": "ADMIN_WRITE"
+        },
+        {
+          "resource": "services/secretmanager.googleapis.com",
+          "permission": "servicemanagement.services.bind",
+          "granted": true,
+          "resourceAttributes": {},
+          "permissionType": "DATA_WRITE"
+        }
+      ],
+      "resourceName": "projects/endless-bounty-433922-g4/services/secretmanager.googleapis.com",
+      "request": {
+        "name": "projects/endless-bounty-433922-g4/services/secretmanager.googleapis.com",
+        "@type": "type.googleapis.com/google.api.serviceusage.v1.EnableServiceRequest"
+      },
+      "response": {
+        "service": {
+          "parent": "projects/838473573150",
+          "state": "ENABLED",
+          "name": "projects/838473573150/services/secretmanager.googleapis.com",
+          "config": {
+            "name": "secretmanager.googleapis.com",
+            "title": "Secret Manager API"
+          }
+        },
+        "@type": "type.googleapis.com/google.api.serviceusage.v1.EnableServiceResponse"
+      }
+    },
+    "insertId": "-qumtvyd6n9i",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "method": "google.api.serviceusage.v1.ServiceUsage.EnableService",
+        "project_id": "endless-bounty-433922-g4",
+        "service": "serviceusage.googleapis.com"
+      }
+    },
+    "timestamp": "2024-11-03T21:09:16.457274940Z",
+    "severity": "NOTICE",
+    "logName": "projects/endless-bounty-433922-g4/logs/cloudaudit.googleapis.com%2Factivity",
+    "operation": {
+      "id": "operations/acat.p2-838473573150-6b585b7e-09a3-42f5-86a9-550c4b49fa14",
+      "producer": "serviceusage.googleapis.com",
+      "last": true
+    },
+    "receiveTimestamp": "2024-11-03T21:09:16.457274940Z"
+  },
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "status": {},
+      "authenticationInfo": {
+        "principalEmail": "haoshenw123@gmail.com",
+        "principalSubject": "user:haoshenw123@gmail.com"
+      },
+      "requestMetadata": {
+        "callerIp": "2601:547:1980:5d60:28d0:46e0:da7a:7c4",
+        "callerSuppliedUserAgent": "google-cloud-sdk gcloud/497.0.0 command/gcloud.secrets.add-iam-policy-binding invocation-id/458d37df06964082a10db20a77114be8 environment/None environment-version/None client-os/MACOSX client-os-ver/23.6.0 client-pltf-arch/arm interactive/True from-script/False python/3.12.3 term/xterm-256color (Macintosh; Intel Mac OS X 23.6.0),gzip(gfe)",
+        "requestAttributes": {},
+        "destinationAttributes": {}
+      },
+      "serviceName": "serviceusage.googleapis.com",
+      "methodName": "google.longrunning.Operations.GetOperation",
+      "authorizationInfo": [
+        {
+          "resource": "projectnumbers/838473573150",
+          "permission": "serviceusage.services.enable",
+          "granted": true,
+          "resourceAttributes": {},
+          "permissionType": "ADMIN_WRITE"
+        },
+        {
+          "resource": "projectnumbers/838473573150/operations/-",
+          "permission": "serviceusage.operations.get",
+          "granted": true,
+          "resourceAttributes": {},
+          "permissionType": "DATA_READ"
+        },
+        {
+          "resource": "projectnumbers/838473573150",
+          "permission": "serviceusage.services.get",
+          "granted": true,
+          "resourceAttributes": {},
+          "permissionType": "DATA_READ"
+        }
+      ],
+      "resourceName": "projects/838473573150/operations/acat.p2-838473573150-6b585b7e-09a3-42f5-86a9-550c4b49fa14"
+    },
+    "insertId": "rr3p0pdf1du",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "project_id": "endless-bounty-433922-g4",
+        "method": "google.longrunning.Operations.GetOperation",
+        "service": "serviceusage.googleapis.com"
+      }
+    },
+    "timestamp": "2024-11-03T21:09:17.777737Z",
+    "severity": "NOTICE",
+    "logName": "projects/endless-bounty-433922-g4/logs/cloudaudit.googleapis.com%2Factivity",
+    "receiveTimestamp": "2024-11-03T21:09:17.946780716Z"
+  },
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "authenticationInfo": {
+        "principalEmail": "haoshenw123@gmail.com",
+        "principalSubject": "user:haoshenw123@gmail.com"
+      },
+      "requestMetadata": {
+        "callerIp": "2601:547:1980:5d60:28d0:46e0:da7a:7c4",
+        "callerSuppliedUserAgent": "google-cloud-sdk gcloud/497.0.0 command/gcloud.secrets.create invocation-id/5a12ee9c67b044a4b9fc9b2292c176fe environment/None environment-version/None client-os/MACOSX client-os-ver/23.6.0 client-pltf-arch/arm interactive/True from-script/False python/3.12.3 term/xterm-256color (Macintosh; Intel Mac OS X 23.6.0),gzip(gfe)",
+        "requestAttributes": {
+          "time": "2024-11-03T21:11:02.104670235Z",
+          "auth": {}
+        },
+        "destinationAttributes": {}
+      },
+      "serviceName": "secretmanager.googleapis.com",
+      "methodName": "google.cloud.secretmanager.v1.SecretManagerService.CreateSecret",
+      "authorizationInfo": [
+        {
+          "permission": "secretmanager.secrets.create",
+          "granted": true,
+          "resourceAttributes": {
+            "service": "secretmanager.googleapis.com",
+            "name": "projects/838473573150/secrets/my-secret",
+            "type": "secretmanager.googleapis.com/Secret"
+          },
+          "permissionType": "ADMIN_WRITE"
+        }
+      ],
+      "resourceName": "projects/838473573150/secrets/my-secret",
+      "request": {
+        "secretId": "my-secret",
+        "secret": {
+          "replication": {
+            "automatic": {}
+          }
+        },
+        "parent": "projects/endless-bounty-433922-g4",
+        "@type": "type.googleapis.com/google.cloud.secretmanager.v1.CreateSecretRequest"
+      },
+      "response": {
+        "name": "projects/838473573150/secrets/my-secret",
+        "replication": {
+          "automatic": {}
+        },
+        "@type": "type.googleapis.com/google.cloud.secretmanager.v1.Secret",
+        "createTime": "2024-11-03T21:11:02.422217Z"
+      }
+    },
+    "insertId": "134nk7ge3bron",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "project_id": "endless-bounty-433922-g4",
+        "service": "secretmanager.googleapis.com",
+        "method": "google.cloud.secretmanager.v1.SecretManagerService.CreateSecret"
+      }
+    },
+    "timestamp": "2024-11-03T21:11:02.093257414Z",
+    "severity": "NOTICE",
+    "logName": "projects/endless-bounty-433922-g4/logs/cloudaudit.googleapis.com%2Factivity",
+    "receiveTimestamp": "2024-11-03T21:11:02.824738143Z"
+  },
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "authenticationInfo": {
+        "principalEmail": "haoshenw123@gmail.com",
+        "principalSubject": "user:haoshenw123@gmail.com"
+      },
+      "requestMetadata": {
+        "callerIp": "2601:547:1980:5d60:28d0:46e0:da7a:7c4",
+        "callerSuppliedUserAgent": "google-cloud-sdk gcloud/497.0.0 command/gcloud.artifacts.repositories.add-iam-policy-binding invocation-id/f1f25c1fd8db4f31a3a715290f723839 environment/None environment-version/None client-os/MACOSX client-os-ver/23.6.0 client-pltf-arch/arm interactive/True from-script/False python/3.12.3 term/xterm-256color (Macintosh; Intel Mac OS X 23.6.0),gzip(gfe),gzip(gfe)",
+        "requestAttributes": {
+          "time": "2024-11-03T22:28:22.235276891Z",
+          "auth": {}
+        },
+        "destinationAttributes": {}
+      },
+      "serviceName": "artifactregistry.googleapis.com",
+      "methodName": "google.devtools.artifactregistry.v1.ArtifactRegistry.SetIamPolicy",
+      "authorizationInfo": [
+        {
+          "resource": "projects/endless-bounty-433922-g4/locations/us-central1/repositories/assignment3repo",
+          "permission": "artifactregistry.repositories.setIamPolicy",
+          "granted": true,
+          "resourceAttributes": {},
+          "permissionType": "ADMIN_WRITE"
+        }
+      ],
+      "resourceName": "projects/endless-bounty-433922-g4/locations/us-central1/repositories/assignment3repo",
+      "request": {
+        "resource": "projects/endless-bounty-433922-g4/locations/us-central1/repositories/assignment3repo",
+        "@type": "type.googleapis.com/google.iam.v1.SetIamPolicyRequest"
+      },
+      "response": {
+        "@type": "type.googleapis.com/google.iam.v1.Policy"
+      }
+    },
+    "insertId": "m7ieqyd5kqs",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "service": "artifactregistry.googleapis.com",
+        "project_id": "endless-bounty-433922-g4",
+        "method": "google.devtools.artifactregistry.v1.ArtifactRegistry.SetIamPolicy"
+      }
+    },
+    "timestamp": "2024-11-03T22:28:22.223300980Z",
+    "severity": "NOTICE",
+    "logName": "projects/endless-bounty-433922-g4/logs/cloudaudit.googleapis.com%2Factivity",
+    "receiveTimestamp": "2024-11-03T22:28:22.775828114Z"
+  }
+]
